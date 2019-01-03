@@ -1,5 +1,6 @@
 package com.tum.testapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -19,9 +20,17 @@ class MainActivity : AppCompatActivity() {
   }
 
   fun countToastClick(view: View){
-    val countString = counterText.text.toString()
+    val countString = counterTextField.text.toString()
     var count: Int = countString.toInt()
     count++
-    counterText.text= count.toString()
+    counterTextField.text= count.toString()
+  }
+
+  fun randomButtonClick(view: View){
+    val randomIntent = Intent(this, SecondActivity::class.java)
+    val countString = counterTextField.text.toString()
+    val count: Int = countString.toInt()
+    randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
+    startActivity(randomIntent)
   }
 }

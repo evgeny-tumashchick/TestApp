@@ -8,7 +8,7 @@
   android:background="@color/screenBackground" tools:context=".MainActivity">
 
   <TextView
-    android:id="@+id/counterText"
+    android:id="@+id/counterTextField"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/hello_text"
@@ -31,7 +31,7 @@
     android:text="Toast"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/counterText"/>
+    app:layout_constraintTop_toBottomOf="@+id/counterTextField"/>
   <Button
     android:onClick="countToastClick"
     android:id="@+id/countButton"
@@ -46,8 +46,9 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/randomButton"
     app:layout_constraintStart_toEndOf="@+id/toastButton"
-    app:layout_constraintTop_toBottomOf="@+id/counterText"/>
+    app:layout_constraintTop_toBottomOf="@+id/counterTextField"/>
   <Button
+    android:onClick="randomButtonClick"
     android:id="@+id/randomButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -58,6 +59,6 @@
     android:text="Random"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/counterText"/>
+    app:layout_constraintTop_toBottomOf="@+id/counterTextField"/>
 
 </android.support.constraint.ConstraintLayout>
