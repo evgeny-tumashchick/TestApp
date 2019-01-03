@@ -33,6 +33,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/counterText"/>
   <Button
+    android:onClick="countToastClick"
     android:id="@+id/countButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
